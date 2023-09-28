@@ -106,7 +106,73 @@ export default {
         this.altDateValue || ""
       );
     },
-
+    calculateMoment(value, type) {
+      var m = new jMoment();
+      if (value == "lastyear") {
+        m.jYear(m.jYear() - 1);
+      } else if (value == "lastmonth") {
+        m.jMonth(m.jMonth() - 1);
+      } else if (value == "lastweek") {
+        m.jDate(m.jDate() - 7);
+      } else if (value == "lastday") {
+        m.jDate(m.jDate() - 1);
+      } else if (value == "today") {
+        if (type == "max") {
+          m.endOf("day");
+        } else {
+          m.startOf("day");
+        }
+      } else if (value == "thisyear") {
+        if (type == "max") {
+          m.endOf("jyear");
+        } else {
+          m.startOf("jyear");
+        }
+      } else if (value == "thismonth") {
+        if (type == "max") {
+          m.endOf("jmonth");
+        } else {
+          m.startOf("jmonth");
+        }
+      } else if (value == "thisweek") {
+        if (type == "max") {
+          m.endOf("jweek");
+        } else {
+          m.startOf("jweek");
+        }
+      } else if (value == "nextyear") {
+        m.jYear(m.jYear() + 1);
+      } else if (value == "nextmonth") {
+        m.jMonth(m.jMonth() + 1);
+      } else if (value == "nextweek") {
+        m.jDate(m.jDate() + 7);
+      } else if (value == "nextday") {
+        m.jDate(m.jDate() + 1);
+      } else if (
+        value.indexOf("/") !== -1 &&
+        jMoment(value, "jYYYY/jMM/jDD").isValid()
+      ) {
+        m = jMoment(value, "jYYYY/jMM/jDD");
+      } else if (
+        value.indexOf("-") !== -1 &&
+        jMoment(value, "jYYYY-jMM-jDD").isValid()
+      ) {
+        m = jMoment(value, "jYYYY-jMM-jDD");
+      } else if (
+        value.indexOf("/") !== -1 &&
+        jMoment(value, "YYYY/MM/DD", true).isValid()
+      ) {
+        m = jMoment(value, "YYYY/MM/DD");
+      } else if (
+        value.indexOf("-") !== -1 &&
+        jMoment(value, "YYYY-MM-DD", true).isValid()
+      ) {
+        m = jMoment(value, "YYYY-MM-DD");
+      } else {
+        m = jMoment(value, "jYYYY-jMM-jDD");
+      }
+      return m;
+    },
     setInitialValue() {
       this.value = this.fieldValue;
     },
