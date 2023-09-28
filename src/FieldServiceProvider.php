@@ -1,6 +1,6 @@
 <?php
 
-namespace MZiraki\PersianDateField;
+namespace Romero\PersianDateField;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;

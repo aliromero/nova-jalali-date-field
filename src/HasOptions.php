@@ -1,6 +1,6 @@
 <?php
 
-namespace MZiraki\PersianDateField;
+namespace Romero\PersianDateField;
 
 trait HasOptions
 {
