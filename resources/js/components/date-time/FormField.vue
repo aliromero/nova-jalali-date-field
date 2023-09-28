@@ -18,7 +18,7 @@
           :input-attrs="{ style: 'direction: ltr; text-align: end;' }"
           inputClass="w-full form-control form-input form-input-bordered"
           :locale="locale"
-          max="1450/12/29 23:59:59"
+          max="1403/1/1 23:59:59"
           min="378/10/11 00:00:00"
           :placeholder="placeholder"
           type="datetime"
