@@ -39,4 +39,27 @@ trait HasOptions
     {
         return $this->withMeta(compact('locale'));
     }
+
+
+    /**
+     * Set Minimum Date.
+     *
+     * @param string :TODO: add more formats (timestamp, carbon, jdate, string)
+     * @return PersianDateTime
+     */
+    public function min($min)
+    {
+        return $this->withMeta(compact('min'));
+    }
+
+    /**
+     * Set Maximum Date.
+     *
+     * @param string :TODO: add more formats (timestamp, carbon, jdate, string)
+     * @return PersianDateTime
+     */
+    public function max($max)
+    {
+        return $this->withMeta(compact('max'));
+    }
 }
