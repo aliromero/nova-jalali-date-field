@@ -46,7 +46,7 @@
 
 <script>
 import Vue3PersianDatetimePicker from "vue3-persian-datetime-picker";
-import { DependentFormField, HandlesValidationErrors } from "laravel-nova";
+// import { DependentFormField, HandlesValidationErrors } from "laravel-nova";
 import jMoment from "moment-jalaali";
 
 export default {
@@ -54,7 +54,7 @@ export default {
     DatePicker: Vue3PersianDatetimePicker,
   },
 
-  mixins: [DependentFormField, HandlesValidationErrors],
+  //   mixins: [DependentFormField, HandlesValidationErrors],
 
   computed: {
     altDateValue() {
