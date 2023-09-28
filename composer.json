@@ -29,13 +29,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "MZiraki\\PersianDateField\\": "src/"
+            "Romero\\PersianDateField\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "MZiraki\\PersianDateField\\FieldServiceProvider"
+                "Romero\\PersianDateField\\FieldServiceProvider"
             ]
         }
     },

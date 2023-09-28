@@ -12,7 +12,7 @@ A persian/jalali date/datetime resource field for Laravel Nova
 Install the package into a Laravel app that uses [Nova](https://nova.laravel.com) with Composer:
 
 ```bash
-composer require mziraki/nova-persian-date-field
+composer require aliromero/nova-jalali-date-field
 ```
 
 ## Usage
@@ -20,17 +20,21 @@ composer require mziraki/nova-persian-date-field
 Add the field to your resource in the ```fields``` method:
 
 ```php
-use MZiraki\PersianDateField\PersianDate;
-use MZiraki\PersianDateField\PersianDateTime;
+use Romero\PersianDateField\PersianDate;
+use Romero\PersianDateField\PersianDateTime;
 
 PersianDate::make('DueOn')
     ->color('rgb(30, 136, 229)') // customize color
     ->format('jYYYY/jMM/jDD') // customize display format
+    ->min('lastmonth') // customize min date
+    ->max('today') // customize max date
     ->locale('fa,en'), // customize locale
 
 PersianDateTime::make('PublishedAt')
     ->color('rgb(30, 136, 229)') // customize color
     ->format('jYYYY/jMM/jDD HH:mm:ss') // customize display format
+    ->min('lastmonth') // customize min date
+    ->max('today') // customize max date
     ->locale('fa,en'), // customize locale
 ```
 
