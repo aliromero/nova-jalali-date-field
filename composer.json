@@ -1,5 +1,5 @@
 {
-    "name": "mziraki/nova-persian-date-field",
+    "name": "aliromero/nova-jalali-date-field",
     "description": "Laravel Nova Jalali/Persian Date/DateTime field.",
     "keywords": [
         "laravel",
@@ -13,8 +13,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Mahdi Ziraki",
-            "email": "m.zirakit@gmail.com"
+            "name": "Ali Romero",
+            "email": "aliyeketaz@gmail.com"
         }
     ],
     "require": {
