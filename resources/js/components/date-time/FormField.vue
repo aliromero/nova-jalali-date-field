@@ -20,8 +20,8 @@
                     :placeholder="placeholder"
                     compact-time
                     inputClass="w-full form-control form-input form-input-bordered"
-                    max="1403/1/1 23:59:59"
-                    min="378/10/11 00:00:00"
+                    :max="maxDate"
+                    :min="minDate"
                     type="datetime"
                 >
                     <template #clear-btn="{ vm }">
